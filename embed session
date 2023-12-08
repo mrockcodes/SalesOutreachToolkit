@@ -1,0 +1,4 @@
+const session = new OfficeExtension.EmbeddedSession(url, { id: "embed-iframe",container: document.getElementById("iframeHost") });
+session.init().then(function () {
+    window.console.log("Session successfully initialized");
+});
