@@ -1,0 +1,12 @@
+function hideToolbars() {
+    Visio.run(session, function(context){
+        const app = context.document.application;
+        app.showToolbars = false;
+        return context.sync().then(function () {
+            window.console.log("Toolbars Hidden");
+        });
+    }).catch(function(error)
+    {
+        window.console.log("Error: " + error);
+    });
+};
