@@ -1,0 +1,23 @@
+# Dictionary to store your shortcuts and corresponding text
+shortcut_dict = {
+    "greet": "Hello! How can I help you today?",
+    "intro": "Hi there! My name is [Your Name], and I specialize in [Your Expertise].",
+    # Add more shortcuts and text as needed
+}
+
+def main():
+    while True:
+        user_input = input("Type a shortcut: ")
+        
+        if user_input.lower() == 'exit':
+            print("Exiting the program.")
+            break
+
+        # Check if the shortcut exists in the dictionary
+        if user_input in shortcut_dict:
+            print(shortcut_dict[user_input])
+        else:
+            print("Shortcut not found. Type 'exit' to end the program.")
+
+if __name__ == "__main__":
+    main()
